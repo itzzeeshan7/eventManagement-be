@@ -23,7 +23,7 @@ exports.createEvent = async (req, res) => {
 exports.getEvents = async (req, res) => {
   try {
     const pageNumber = parseInt(req.params.pageNumber) || 1; 
-    const pageSize = 10; 
+    const pageSize = 5; 
     const skip = (pageNumber - 1) * pageSize; 
 
     const events = await Event.aggregate([
